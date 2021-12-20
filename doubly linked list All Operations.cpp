@@ -1,5 +1,7 @@
 #include<iostream>
 #include<conio.h>
+#include<Windows.h>
+
 using namespace std;
 
 struct Node
@@ -46,8 +48,7 @@ void insertAtEnd(int val)
         newnode->next = NULL;
         newnode->prev = tail;
 		tail->next = newnode;	
-        tail = newnode;
-        
+        tail = newnode;    
     }
 }
 
@@ -72,11 +73,7 @@ void insertAtSpecPos(int pos, int val)
 		temp->next->prev=newnode;
 		newnode->next = temp->next;
 		newnode->prev = temp;
-		temp->next= newnode;
-		
-		
-		
-        
+		temp->next= newnode;  
     }
 }
 
@@ -172,15 +169,15 @@ int main()
 {
 	int choice, val, pos;
 do_:
-	cout << "1. insert at beginning\n";
-	cout << "2. insert at ending\n";
-	cout << "3. insert at a specific postion\n";
-	cout << "4. display list\n";
-	cout << "5. delete from end\n";
-	cout << "6. delete from start\n";
-	cout << "7. delete from specific position\n";
-	cout << "8. search element\n";
-	cout << "9. exit \n";
+	cout << "1. Insert at Beginning\n";
+	cout << "2. Insert at Ending\n";
+	cout << "3. Insert at a Specific Postion\n";
+	cout << "4. Display List\n";
+	cout << "5. Delete From End\n";
+	cout << "6. Delete From Start\n";
+	cout << "7. Delete From Specific Position\n";
+	cout << "8. Search Element\n";
+	cout << "9. Exit \n";
 	cout << "ENTER YOUR CHOICE : \n";
 	cin >> choice;
 	switch (choice)
